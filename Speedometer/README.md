@@ -6,7 +6,7 @@ This guide shows how to set up the speed display using the simplified components
 
 Start by cloning this repo and opening OutdoorNavigation.esproj in Lens Studio 5.12+. Ensure Experimental APIs are enabled in the project settings.
 
-Note that this Lens was created by starting with the Outdoor Navigation Sample Project in the [Spectacles Sample repo](https://github.com/Snapchat/Spectacles-Sample)
+Note that this Lens was created by starting with the Outdoor Navigation Sample Project in the [Spectacles Sample repo](https://github.com/Snapchat/Spectacles-Sample) and vibe coding with Cursor
 
 ## Files Created
 
