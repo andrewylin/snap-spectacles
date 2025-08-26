@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/9ea1086e-6d6b-416c-b703-7843b51eace3>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9588507a-aa03-4e59-9106-235fac71ef1f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9588507a-aa03-4e59-9106-235fac71ef1f
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> de6a7660-c7be-4da7-a9b5-beec30c3d0ff
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/de6a7660-c7be-4da7-a9b5-beec30c3d0ff>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b07ab44e-cc1f-4f1d-a94c-eee801deb257
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    mapComponent: false
+    speedDisplayParent: false
+    speedDisplayPrefab: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - mapComponent: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      speedDisplayPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      speedDisplayParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType mapComponent
+    - // @input Asset.ObjectPrefab speedDisplayPrefab
+    - // @input SceneObject speedDisplayParent

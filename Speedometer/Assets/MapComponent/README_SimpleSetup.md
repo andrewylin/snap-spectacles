@@ -1,0 +1,110 @@
+# Simple Speed Display Setup
+
+This guide shows how to set up the speed display using the simplified components that avoid the "Prefab is empty" error.
+
+## Files Created
+
+- **SpeedDisplaySimple.prefab**: Simple prefab with just UI elements
+- **SpeedDisplaySimpleController.ts**: Controller that handles all logic
+- **README_SimpleSetup.md**: This setup guide
+
+## Setup Instructions
+
+### 1. Add Components to Scene
+
+1. **Create a SceneObject** in your scene (e.g., "SpeedDisplayContainer")
+2. **Add SpeedDisplaySimpleController component** to this object
+3. **Configure the inputs** in the Inspector:
+   - `mapComponent`: Reference to your MapComponent
+   - `speedDisplayPrefab`: Drag SpeedDisplaySimple.prefab here
+   - `speedDisplayParent`: The SceneObject that should contain the speed display (usually a Canvas or UI parent)
+
+### 2. Scene Hierarchy Example
+
+```
+Scene
+├── MapComponent (with MapComponent script)
+├── UI Canvas
+│   └── (SpeedDisplay will be created here at runtime)
+└── SpeedDisplayContainer (with SpeedDisplaySimpleController script)
+    ├── mapComponent: → MapComponent
+    ├── speedDisplayPrefab: → SpeedDisplaySimple.prefab
+    └── speedDisplayParent: → UI Canvas
+```
+
+### 3. What Happens at Runtime
+
+1. **SpeedDisplaySimpleController** starts up
+2. **Disables network features** automatically (avoids permission issues)
+3. **Instantiates SpeedDisplaySimple.prefab** under the specified parent
+4. **Finds the Text component** in the prefab
+5. **Starts monitoring speed** from MapComponent
+6. **Updates text display** with current speed in mph
+
+## Features
+
+✅ **No permission issues** - Network features disabled by default  
+✅ **No empty prefab errors** - Uses only standard Lens Studio components  
+✅ **Real-time speed display** - Shows current speed in "X.X mph" format  
+✅ **Map following** - Map automatically follows user location  
+✅ **Error handling** - Graceful fallbacks when GPS data isn't available  
+✅ **Simple setup** - Just drag and connect in Inspector  
+
+## Visual Appearance
+
+The speed display appears in the top-right corner with:
+- **White text** with black shadow for readability
+- **Semi-transparent background** for contrast
+- **Bold 18pt font** for clear visibility
+- **"0.0 mph"** format with one decimal place
+
+## Troubleshooting
+
+### Speed Shows "0.0 mph"
+- Ensure you're outdoors with good GPS signal
+- Check that location permissions are enabled on the device
+- Verify that the MapComponent is properly configured
+
+### Prefab Won't Load
+- Make sure SpeedDisplaySimple.prefab is properly imported
+- Check that all file references are connected in Inspector
+- Try recreating the SpeedDisplayContainer object
+
+### Permission Errors
+- The controller automatically disables network features
+- If you still get permission errors, check that `require('LensStudio:RawLocationModule')` is at the top of relevant files
+
+## Advanced Usage
+
+### Getting Current Speed in Other Scripts
+
+```typescript
+@component
+export class MyScript extends BaseScriptComponent {
+  @input
+  private speedController: SpeedDisplaySimpleController;
+  
+  onStart() {
+    const currentSpeed = this.speedController.getCurrentSpeed();
+    print(`Current speed: ${currentSpeed} mph`);
+  }
+}
+```
+
+### Hiding/Showing Speed Display
+
+```typescript
+// Hide speed display
+this.speedController.setVisible(false);
+
+// Show speed display
+this.speedController.setVisible(true);
+```
+
+## Next Steps
+
+1. **Test the basic setup** to ensure speed display works
+2. **Customize the appearance** by modifying SpeedDisplaySimple.prefab
+3. **Add additional features** as needed for your specific use case
+
+The simplified setup should resolve the "Prefab is empty" error and provide a working speed display for your outdoor navigation lens.

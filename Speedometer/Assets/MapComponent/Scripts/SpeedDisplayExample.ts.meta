@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/20ea2a45-f626-45ec-9e65-6b5f164302c0>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f32adea1-c14d-4d82-9e38-413d6329d81d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f32adea1-c14d-4d82-9e38-413d6329d81d
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a7ace2c8-68cb-45b0-bc3d-f8a2af1fe16f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a7ace2c8-68cb-45b0-bc3d-f8a2af1fe16f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 91d0b890-6c49-4ae4-82d6-379b1bc3ab20
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    mapComponent: false
+    speedDisplayController: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - mapComponent: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      speedDisplayController: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType mapComponent
+    - // @input AssignableType_1 speedDisplayController
