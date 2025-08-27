@@ -1,6 +1,8 @@
 # Simple Speed Display
 Tired of looking down at your car dashboard to know how fast you're going but don't want to pay for an overpriced trim that has an HUD? Or do you feel unsafe looking down at your bike computer or watch while going downhill but really want to know how fast you're going? Look no further than the simple speedometer! Thanks to AR, you can now know your speed without looking in another direction.
 
+![ACB7FDE8-0E81-4E1A-8058-AAAF10FF658F_1_102_o](https://github.com/user-attachments/assets/02720147-76ae-4dcf-b3db-3f8dd4feaf1a)
+
 ## Simple Speed Display Setup
 This guide shows how to set up the speed display using the simplified components.
 
